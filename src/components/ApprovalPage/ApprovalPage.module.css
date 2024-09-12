@@ -1,0 +1,15 @@
+.title {
+  color: var(--warning);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+}

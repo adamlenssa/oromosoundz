@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h1 {
+  font-size: 3rem;
+  color: var(--light-accent);
+  text-align: center;
+}
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--dark-color);
+  padding: 0.5rem 2rem;
+  border-radius: 40px;
+  color: var(--light-color);
+  width: fit-content;
+}
+.container .row {
+  margin: 1.5rem 0rem;
+}
+
+.row label {
+  font-size: 1.5rem;
+  color: var(--light-color);
+}
+
+.row input,
+.row select {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+}
+.row input:focus {
+  outline: none;
+}
+
+.container form p {
+  margin: 0rem 0rem 1.5rem;
+}
+
+.container form input[type="submit"] {
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  background-color: var(--light-accent);
+  color: var(--light-color);
+  border: 1px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+}

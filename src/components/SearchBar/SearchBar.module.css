@@ -1,0 +1,39 @@
+.searchBar {
+  width: 50%;
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.searchBar.focused {
+  outline: 2px solid var(--dark-color);
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.searchBar:focus {
+  border: 1px solid var(--dark-color);
+}
+
+.searchBar input {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+}
+
+.searchBar input:focus {
+  outline: none;
+}
+
+.searchBar svg {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: var(--default-color);
+}

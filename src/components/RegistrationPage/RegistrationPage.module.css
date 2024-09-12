@@ -1,0 +1,60 @@
+.section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper h1 {
+  font-size: 2rem;
+  color: var(--light-accent);
+  text-align: center;
+}
+
+.row {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.row input {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+  color: var(--light-color);
+  border-bottom: 3px solid;
+}
+.row input:focus {
+  outline: none;
+  background-color: var(--light-color);
+  color: black;
+}
+
+.row label {
+  font-size: 1.5rem;
+  color: var(--light-color);
+}
+
+.row select {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.wrapper form input[type="submit"] {
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  background-color: var(--light-accent);
+  color: var(--light-color);
+  border: 1px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.wrapper form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--dark-color);
+  padding: 4rem 2rem;
+  border-radius: 40px;
+}

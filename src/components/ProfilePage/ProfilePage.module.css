@@ -1,0 +1,32 @@
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--primary-color);
+}
+
+.profilePicture {
+  width: 10rem;
+}
+.text {
+  color: var(--light-color);
+}
+.text span {
+  color: var(--light-accent);
+}
+
+.songs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.songs > div {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.songs > :nth-child(odd) {
+  background-color: var(--light-accent);
+}

@@ -1,0 +1,128 @@
+@import "../../varibales.css";
+.notloggedin {
+  background-image: url(../../assets/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  color: var(--light-color);
+  align-items: center;
+  justify-content: space-around;
+}
+
+.notloggedin > div {
+  margin: 6rem 0 rem;
+}
+
+.logo {
+  width: 10rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem;
+}
+
+.right .text {
+  text-align: center;
+}
+
+.btn {
+  width: fit-content;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+}
+
+.lightaccent {
+  background-color: var(--light-accent);
+}
+
+.maincolor {
+  background-color: var(--primary-color);
+}
+
+.trendingSection {
+  margin: 2rem;
+}
+
+.trendingSection .title {
+  color: var(--dark-accent);
+  text-align: center;
+}
+
+.trendingSection .trendingVideos {
+  display: flex;
+  overflow-y: auto;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.adam {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark-accent);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 70%;
+}
+
+.adam .text {
+  text-align: center;
+  color: var(--light-color);
+  max-width: 40rem;
+  width: 100%;
+}
+
+.text p {
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.adam .picture {
+  border-radius: 50%;
+  max-width: 30rem;
+}
+
+.picture img {
+  border-radius: 100%;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 5rem;
+    margin-left: 0.7rem;
+  }
+  .right .text h1 {
+    font-size: 1.3rem;
+  }
+  .right .text p {
+    font-size: 0.8rem;
+  }
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.5rem;
+  }
+  .buttons {
+    margin: 2rem;
+  }
+
+  .adam {
+    flex-direction: column;
+  }
+
+  .adam .text h2 {
+    font-size: 1.4rem;
+  }
+  .adam .text p {
+    font-size: 1rem;
+  }
+  .adam .picture {
+    width: 10rem;
+  }
+}

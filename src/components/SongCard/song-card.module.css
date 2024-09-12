@@ -1,0 +1,33 @@
+@import "../../varibales.css";
+.songCard {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 1rem;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.songCard .ratings {
+  display: inline-flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+}
+
+.ratings svg:hover {
+  color: var(--default-color);
+}
+.songCard a {
+  color: var(--default-color);
+}
+
+.thumbnail {
+  max-width: 21rem;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,44 @@
+.profilePicture {
+  width: 3.5rem;
+  margin-right: 0.5rem;
+}
+
+.profilePicture img {
+  border-radius: 100%;
+}
+
+.text {
+  display: flex;
+}
+
+.text svg {
+  margin-left: 0.5rem;
+}
+
+.profileDisplay {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.menu {
+  position: absolute;
+  top: 50px;
+  padding: 0.5rem;
+  background-color: #0aa2bd;
+}
+.menu p {
+  text-align: center;
+  padding: 1rem;
+}
+
+.menu :nth-child(2) {
+  color: var(--danger);
+  font-size: large;
+}
+
+@media (max-width: 565px) {
+  .menu {
+    position: relative;
+    background-color: transparent;
+  }
+}

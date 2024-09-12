@@ -1,0 +1,84 @@
+/* @import "../../varibales.css"; */
+
+nav {
+  display: flex;
+  background-color: var(--dark-color);
+  align-items: center;
+  color: var(--light-color);
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+
+.logo {
+  width: 2rem;
+  margin-right: 6px;
+}
+
+.images {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+.hamburgerMenu {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.nav li {
+  padding: 1rem;
+}
+.nav li:hover {
+  background-color: #0aa2bd;
+}
+.music {
+  position: relative;
+}
+.options {
+  display: block;
+  position: absolute;
+  top: 1.5rem;
+  left: -20px;
+  text-align: center;
+  z-index: 50;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.options li {
+  padding: 0.75rem;
+  background-color: var(--dark-color);
+}
+.options li:hover {
+  background-color: #0aa2bd;
+}
+
+a {
+  color: var(--light-color);
+}
+
+.menu {
+  margin-left: auto;
+}
+
+@media (max-width: 565px) {
+  .hamburgerMenu {
+    display: block;
+    margin-left: auto;
+  }
+  .active {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+  .inactive {
+    display: none;
+  }
+  .options {
+    display: block;
+  }
+}

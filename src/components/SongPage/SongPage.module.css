@@ -1,0 +1,110 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.wrapper h2 {
+  color: var(--light-accent);
+  font-size: 3rem;
+  margin: 1rem 0rem;
+  font-weight: normal;
+}
+
+.wrapper h3 {
+  color: var(--dark-accent);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+}
+
+.commentsFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.comment {
+  padding: 1rem;
+  background-color: #0bb1cf;
+  width: 50%;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.top {
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.comment .profilePic {
+  width: 3rem;
+  margin-right: 2rem;
+}
+
+.newComment form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.newComment form textarea {
+  width: 60%;
+  resize: none;
+  padding: 2rem;
+  border: none;
+  outline: 1px solid var(--light-accent);
+  border-radius: 1rem;
+}
+
+.newComment form textarea:focus {
+  outline: none;
+  border-color: var(--light-accent);
+  box-shadow: 0 0 10px var(--light-accent);
+}
+
+.newComment form textarea::placeholder {
+  color: var(--primary-color);
+}
+
+.newComment form input {
+  margin: 1rem 0rem;
+  width: fit-content;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.comment .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment .hover {
+  color: crimson;
+}
+.thumbnail {
+  max-width: 70%;
+  align-self: center;
+}
+
+.audio {
+  width: 100%;
+}
+
+.audio::-webkit-media-controls-panel {
+  background-color: var(--dark-color);
+  border-radius: 1px;
+}
+
+@media (max-width: 480px) {
+  .wrapper h2 {
+    font-size: large;
+  }
+  .wrapper h3 {
+    font-size: medium;
+  }
+  .thumbnail {
+    width: 100%;
+  }
+}

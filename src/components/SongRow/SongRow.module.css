@@ -1,0 +1,25 @@
+.songRow {
+  margin-bottom: 1rem;
+}
+
+.title {
+  color: var(--light-accent);
+  font-size: 2rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.icon {
+  font-size: 3rem;
+}
+
+@media (max-width: 565px) {
+  .songRow {
+    text-align: center;
+  }
+}
