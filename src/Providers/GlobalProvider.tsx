@@ -109,7 +109,12 @@ const GlobalProvider = ({ children }: { children: ReactNode }) => {
   const registerUserInformation = (newUser: RegisterUser) =>
     Requests.registerNewUser(newUser);
 
-  const addNewSong = (song: FormData) => {
+  const addNewSong = (
+    song: Omit<
+      Song,
+      "id" | "uploadedBy" | "time" | "boolean" | "public" | "_count"
+    >
+  ) => {
     if (!user) throw new Error("not Logged in");
     const token = localStorage.getItem(user.username);
     if (!token) throw new Error("unauthorized");

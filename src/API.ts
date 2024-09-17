@@ -1,9 +1,5 @@
-import { Artist, RegisterUser, UserLogin } from "./types";
-import {
-  apiRequestAuth,
-  apiRequestAuthNewSong,
-  apiRequestNoAuth,
-} from "./Constants/axios";
+import { Artist, RegisterUser, Song, UserLogin } from "./types";
+import { apiRequestAuth, apiRequestNoAuth } from "./Constants/axios";
 
 export const Requests = {
   login: (userLogin: UserLogin, token: string | null) => {
@@ -56,9 +52,15 @@ export const Requests = {
     apiRequestAuth(token)
       .post("/artists", newArtist)
       .then((res) => res.data),
-  addNewSong: (formData: FormData, token: string) =>
-    apiRequestAuthNewSong(token)
-      .post("/songs/l", formData)
+  addNewSong: (
+    newSong: Omit<
+      Song,
+      "id" | "uploadedBy" | "time" | "boolean" | "public" | "_count"
+    >,
+    token: string
+  ) =>
+    apiRequestAuth(token)
+      .post("/songs/", newSong)
       .then((res) => res.data),
   likeSong: (songId: number, token: string) =>
     apiRequestAuth(token)

@@ -20,14 +20,10 @@ const AddMusicPage = () => {
   } = useGlobalContext();
   const navigate = useNavigate();
   const handleLinkToAudio = async () => {
-    const songAudio = await apiRequestNoAuth.post(
-      "/songs/download",
-      {
-        link: newSong.link,
-      },
-      { responseType: "blob" }
-    );
-    return songAudio.data;
+    const songAudio = await apiRequestNoAuth.post("/songs/download", {
+      link: newSong.link,
+    });
+    return songAudio.data.link;
   };
   const imageLink = async () => {
     const { data }: { data: { link: string } } = await axios.post(
@@ -63,14 +59,8 @@ const AddMusicPage = () => {
               const artistExists = allArtists.find(
                 (artist) => artist.fullName == newSong.singer
               );
-              const songBlob = await handleLinkToAudio();
+              const songID = await handleLinkToAudio();
               const imageUrl = await imageLink();
-              const data = new FormData();
-              data.append("singer", newSong.singer);
-              data.append("songname", newSong.songname);
-              data.append("song", songBlob);
-              data.append("type", newSong.type);
-              data.append("image", imageUrl);
               if (!artistExists) {
                 const [firstName, lastName] = newSong.singer.split(" ");
                 await Requests.addNewArtist(token, {
@@ -82,7 +72,13 @@ const AddMusicPage = () => {
                 });
               }
               if (user.role == "admin") {
-                return addNewSong(data)
+                return addNewSong({
+                  link: songID,
+                  singer: newSong.singer,
+                  songname: newSong.songname,
+                  type: newSong.type,
+                  image: imageUrl,
+                })
                   .then(() => {
                     setDisable(false);
                     setNewSong({
@@ -103,7 +99,13 @@ const AddMusicPage = () => {
                   });
               }
 
-              return addNewSong(data).then(() => {
+              return addNewSong({
+                link: songID,
+                singer: newSong.singer,
+                songname: newSong.songname,
+                type: newSong.type,
+                image: imageUrl,
+              }).then(() => {
                 setDisable(false);
                 getAllSongs();
                 getAllArtists();

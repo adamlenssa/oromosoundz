@@ -93,7 +93,12 @@ export type TGlobalContext = {
       Omit<Song, "id" | "uploadedBy" | "time" | "boolean" | "public" | "_count">
     >
   >;
-  addNewSong: (song: FormData) => Promise<Response>;
+  addNewSong: (
+    song: Omit<
+      Song,
+      "id" | "uploadedBy" | "time" | "boolean" | "public" | "_count"
+    >
+  ) => Promise<Response>;
   getAllSongs: () => Promise<string | void>;
   getAllLikes: () => Promise<string | void>;
   getAllArtists: () => Promise<string | void>;
