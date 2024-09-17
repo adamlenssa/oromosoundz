@@ -27,7 +27,7 @@ const AddMusicPage = () => {
   };
   const imageLink = async () => {
     const { data }: { data: { link: string } } = await axios.post(
-      "http://localhost:1129/songs/image",
+      "https://oromosoundz.xyz/songs/image",
       {
         link: newSong.link,
       }

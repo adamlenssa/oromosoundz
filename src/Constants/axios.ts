@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:1129/";
+const baseURL = "https://oromosoundz.xyz/";
 
 export const apiRequestNoAuth = axios.create({
   baseURL,
